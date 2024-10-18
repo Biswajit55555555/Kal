@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.container {
+    position: relative;
+}
+
+.login-box {
+    position: relative;
+    width: 400px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ff4d4d, 0 0 30px #ff4d4d, 0 0 45px #ff4d4d;
+    text-align: center;
+    animation: shake 1.5s infinite;
+}
+
+.login-box h2 {
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus ~ label, 
+.input-box input:valid ~ label {
+    top: -20px;
+    color: #ff4d4d;
+}
+
+.neon-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background: #ff4d4d;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border-radius: 25px;
+    box-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d;
+    transition: 0.3s ease;
+}
+
+.neon-button:hover {
+    box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d, 0 0 60px #ff4d4d;
+}
+
+.contact-buttons {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
+
+.contact-btn:hover {
+    color: #ff4d4d;
+    box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d;
+}
+
+.whatsapp {
+    color: #25D366;
+    border-color: #25D366;
+    box-shadow: 0 0 10px #25D366, 0 0 20px #25D366;
+}
+
+.telegram {
+    color: #0088cc;
+    border-color: #0088cc;
+    box-shadow: 0 0 10px #0088cc, 0 0 20px #0088cc;
+}
+
+.contact-btn:hover {
+    animation: shake-vertical 0.5s ease infinite;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes shake-vertical {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
